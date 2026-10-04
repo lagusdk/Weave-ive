@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "dev": "npm run dev --workspace @weave-ive/web",
-    "build": "npm run build --workspaces --if-present",
+    "build": "npm run build --workspace @weave-ive/web",
+    "build:all": "npm run build --workspace @weave-ive/web && npm run build --workspace @weave-ive/vue-comparison && npm run build --workspace @weave-ive/webpack-basics",
     "lint": "npm run lint --workspace @weave-ive/web",
     "typecheck": "npm run typecheck --workspaces --if-present",
     "dev:vue": "npm run dev --workspace @weave-ive/vue-comparison",

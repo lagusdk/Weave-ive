@@ -210,6 +210,8 @@ npm run supabase:types
 
 비교 실습은 각각 `npm run dev:vue`, `npm run dev:webpack`으로 실행합니다. 자세한 비교 항목은 `docs/learning/frontend-comparison.md`에 기록합니다.
 
+배포 대상인 메인 Next.js 앱은 `npm run build`로 빌드합니다. 모든 비교 실습 workspace까지 검증하려면 `npm run build:all`을 사용합니다. Vercel에서도 메인 앱만 빌드하도록 구성해 Vue/Vite 비교 실습의 플랫폼별 네이티브 번들이 서비스 배포를 방해하지 않도록 합니다.
+
 ## 핵심 문장
 
 > 하나의 직무로 나를 정의하지 않는다.

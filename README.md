@@ -179,7 +179,36 @@ Weave:ive는 제품 구현과 함께 다음 프론트엔드 역량을 실제 문
 
 > Planning / Pre-development
 
-현재 저장소에는 서비스의 최신 통합 기획을 기준으로 제품 요구사항과 구현 범위를 정리하고 있습니다. 세부 데이터 모델, 사용자 흐름, 정보 구조와 기술 스택은 후속 문서에서 구체화할 예정입니다.
+현재 저장소에는 서비스의 최신 통합 기획을 기준으로 제품 요구사항과 구현 범위를 정리하고 있습니다. 메인 구현은 Next.js·React·TypeScript와 Supabase를 기준으로 시작하며, Vue와 Webpack은 비교 학습용 실습으로 분리합니다.
+
+## Repository
+
+```text
+apps/web                 Next.js · React · TypeScript 메인 애플리케이션
+labs/vue-comparison      Vue · Vite · TypeScript 비교 실습
+labs/webpack-basics      React · TypeScript · Webpack 번들러 실습
+supabase/migrations      PostgreSQL 스키마와 RLS 마이그레이션
+docs/learning            기술 비교 기록
+assets/brand             원본 브랜드 자산
+```
+
+### 시작하기
+
+```bash
+npm install
+copy apps\web\.env.example apps\web\.env.local
+npm run dev
+```
+
+`.env.local`에는 Supabase 프로젝트의 URL과 publishable key를 입력합니다. 로컬 Supabase 전체 스택을 사용할 때는 Docker 실행 후 다음 명령을 사용합니다.
+
+```bash
+npm run supabase:start
+npm run supabase:reset
+npm run supabase:types
+```
+
+비교 실습은 각각 `npm run dev:vue`, `npm run dev:webpack`으로 실행합니다. 자세한 비교 항목은 `docs/learning/frontend-comparison.md`에 기록합니다.
 
 ## 핵심 문장
 

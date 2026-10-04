@@ -1,0 +1,29 @@
+{
+  "name": "weave-ive",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/web",
+    "labs/vue-comparison",
+    "labs/webpack-basics"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @weave-ive/web",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspace @weave-ive/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "dev:vue": "npm run dev --workspace @weave-ive/vue-comparison",
+    "dev:webpack": "npm run dev --workspace @weave-ive/webpack-basics",
+    "build:webpack": "npm run build --workspace @weave-ive/webpack-basics",
+    "supabase:start": "supabase start",
+    "supabase:stop": "supabase stop",
+    "supabase:reset": "supabase db reset",
+    "supabase:types": "supabase gen types typescript --local --schema public > apps/web/src/types/database.ts"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "devDependencies": {
+    "supabase": "^2.119.0"
+  }
+}

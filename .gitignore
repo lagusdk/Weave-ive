@@ -1,2 +1,25 @@
+# Dependencies and build output
+node_modules/
+.next/
+dist/
+coverage/
+.vercel/
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.*
+!.env.example
+!**/.env.example
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db
+
+# Supabase local state
+supabase/.branches/
+supabase/.temp/
+
 # Local planning notes
 /최종기획_개인 아카이브 포트폴리오 정리.txt

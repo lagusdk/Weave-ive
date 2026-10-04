@@ -1,0 +1,42 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  color: #f7f4ff;
+  background: #080914;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button { font: inherit; cursor: pointer; }
+
+main {
+  width: min(760px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 72px 0;
+}
+
+.eyebrow { color: #a997ff; font-size: 14px; }
+h1 { max-width: 620px; margin: 12px 0; font-size: clamp(36px, 7vw, 64px); line-height: 1.05; }
+.intro { max-width: 620px; color: #a8adc0; line-height: 1.7; }
+
+.experience-card {
+  margin-top: 44px;
+  padding: 30px;
+  border: 1px solid #ffffff20;
+  border-radius: 24px;
+  background: #111326;
+  box-shadow: 0 30px 80px #28107040;
+}
+
+.card-head { display: flex; justify-content: space-between; gap: 20px; }
+.card-head h2 { margin: 18px 0 8px; font-size: 30px; }
+.card-head p, .details { color: #a8adc0; line-height: 1.7; }
+.card-head small { color: #676d82; white-space: nowrap; }
+.status { padding: 5px 10px; border-radius: 999px; color: #86efac; background: #4ade8018; font-size: 12px; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0; }
+.tags span { padding: 6px 10px; border: 1px solid #ffffff18; border-radius: 8px; color: #c8cada; font-size: 12px; }
+.experience-card button { display: flex; width: 100%; justify-content: space-between; padding: 18px 0 0; border: 0; border-top: 1px solid #ffffff18; color: #eceaf4; background: transparent; }
+.experience-card button span { transition: transform 180ms ease; }
+.experience-card button span.rotated { transform: rotate(180deg); }
+.details { margin: 18px 0 0; }

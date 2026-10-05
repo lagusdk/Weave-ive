@@ -3,7 +3,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { ArrowLeft, LockKeyhole, Sparkles } from "lucide-react";
 
-import { GoogleSignInButton } from "@/components/google-sign-in-button";
+import { EmailAuthForm } from "@/components/email-auth-form";
 import { hasSupabaseEnv } from "@/lib/supabase/env";
 import { createClient } from "@/lib/supabase/server";
 
@@ -34,9 +34,9 @@ export default async function LoginPage() {
           </div>
         </div>
         <h1 className="mt-9 text-3xl font-semibold tracking-[-0.04em]">다시, 나의 경험으로.</h1>
-        <p className="mt-3 text-sm leading-6 text-slate-400">Google 계정으로 로그인하고 지금까지의 관심과 경험을 한곳에서 둘러보세요.</p>
+        <p className="mt-3 text-sm leading-6 text-slate-400">별도 서비스 설정 없이 이메일 계정 하나로 프로토타입을 시작해보세요.</p>
         <div className="mt-8">
-          <GoogleSignInButton disabled={!isConfigured} />
+          <EmailAuthForm disabled={!isConfigured} />
         </div>
         {!isConfigured ? (
           <p className="mt-4 rounded-xl bg-amber-300/10 px-3 py-2 text-xs leading-5 text-amber-200">Supabase 환경변수를 먼저 설정해야 로그인을 사용할 수 있어요.</p>

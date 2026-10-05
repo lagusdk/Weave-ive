@@ -212,12 +212,12 @@ npm run supabase:types
 
 배포 대상인 메인 Next.js 앱은 `npm run build`로 빌드합니다. 모든 비교 실습 workspace까지 검증하려면 `npm run build:all`을 사용합니다. Vercel에서도 메인 앱만 빌드하도록 구성해 Vue/Vite 비교 실습의 플랫폼별 네이티브 번들이 서비스 배포를 방해하지 않도록 합니다.
 
-### UI 프로토타입과 Google 로그인
+### UI 프로토타입과 로그인
 
-현재 메인 앱에는 실제 Supabase Google OAuth 로그인과 샘플 데이터 기반 UI 프로토타입이 포함되어 있습니다.
+현재 메인 앱에는 실제 Supabase 이메일·비밀번호 로그인과 샘플 데이터 기반 UI 프로토타입이 포함되어 있습니다. Google OAuth 코드도 추후 활성화할 수 있도록 유지하지만, 초기 테스트에는 별도의 Google Cloud 설정이 필요 없는 이메일 로그인을 사용합니다.
 
 ```text
-/login                 Google 로그인
+/login                 이메일 로그인 및 테스트 계정 생성
 /dashboard             개인 Dashboard
 /archive               Experience Archive
 /experiences/new       기록 작성 프로토타입
@@ -226,7 +226,7 @@ npm run supabase:types
 /share/demo/frontend   공개 페이지 예시
 ```
 
-Google OAuth를 활성화하려면 Supabase Dashboard의 Authentication Providers에서 Google Client ID와 Client Secret을 등록합니다. 앱의 OAuth 완료 주소는 로컬에서 `http://localhost:3000/auth/callback`, 배포 환경에서 `https://weave-ive.vercel.app/auth/callback`을 사용합니다. Google Cloud의 Authorized redirect URI에는 Supabase Google Provider 화면에 표시되는 Supabase callback URL을 등록합니다.
+Supabase Dashboard에서 Email Provider는 기본으로 활성화되어 있습니다. 회원가입 시 이메일 확인을 사용하는 경우 앱의 인증 완료 주소는 로컬에서 `http://localhost:3000/auth/callback`, 배포 환경에서 `https://weave-ive.vercel.app/auth/callback`을 사용합니다.
 
 ## 핵심 문장
 

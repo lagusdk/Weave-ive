@@ -26,6 +26,15 @@ button {
   cursor: pointer;
 }
 
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(139, 117, 255, 0.45);
+  outline-offset: 2px;
+}
+
 .gradient-text {
   background: linear-gradient(100deg, #8d78ff 5%, #d758d7 48%, #ff8a5c 90%);
   background-clip: text;

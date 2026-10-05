@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, Database, Goal, Layers3, Share2 } from "lucide-react";
 
 import { ExperienceCard } from "@/components/experience-card";
@@ -43,9 +44,9 @@ export default function Home() {
               나를 골라 공유하는 제너럴리스트의 개인 아카이브.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <button className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 font-semibold text-slate-950 transition hover:-translate-y-0.5">
+              <Link href="/login" className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 font-semibold text-slate-950 transition hover:-translate-y-0.5">
                 Archive 시작하기 <ArrowRight className="size-4" />
-              </button>
+              </Link>
               <span className="rounded-xl border border-white/10 px-5 py-3 text-sm text-slate-300">
                 Interest → Goal → Activity → Experience
               </span>
